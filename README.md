@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/wbfoss-mcp-poisoning-poc-badge.png)](https://mseep.ai/app/wbfoss-mcp-poisoning-poc)
+
 # MCP Poisoning Attack - PoC
 
 This repository demonstrates a variety of **MCP Poisoning Attacks** affecting real-world AI agent workflows.
