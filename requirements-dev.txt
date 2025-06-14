@@ -1,0 +1,20 @@
+# GenSecAI Development Dependencies
+-r requirements.txt
+
+# Code quality
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.0.0
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.3.0
+
+# Development
+pre-commit>=3.0.0
+ipython>=8.0.0
+
+# Security testing
+bandit>=1.7.0
+safety>=2.3.0

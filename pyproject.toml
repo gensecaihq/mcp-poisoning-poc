@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gensecai-mcp-poisoning-poc"
+version = "1.0.0"
+description = "MCP Tool Poisoning Security Research by GenSecAI"
+authors = [{name = "GenSecAI", email = "ask@gensecai.org"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://gensecai.org"
+Repository = "https://github.com/gensecaihq/mcp-poisoning-poc"
+Issues = "https://github.com/gensecaihq/mcp-poisoning-poc/issues"
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+src_paths = ["src", "tests"]
+known_first_party = ["gensecai"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["*/tests/*", "*/examples/*"]
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
+skip_covered = false
